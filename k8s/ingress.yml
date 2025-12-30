@@ -8,10 +8,10 @@ metadata:
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
-    
+
 spec:
   rules:
-  - host: chat-apu.com
+  - host:  chat-apu.com
     http:
       paths:
       - pathType: Prefix
@@ -21,11 +21,11 @@ spec:
             name: frontend
             port: 
               number: 80
-      
+              
       - pathType: Prefix
         path: "/api"
         backend:
           service:
             name: backend
-            port: 
+            port:
               number: 5001
